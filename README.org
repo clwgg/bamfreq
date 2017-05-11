@@ -1,0 +1,20 @@
+* bamfreq
+bamfreq is a small tool written in C on top of 
+[[https://github.com/samtools/htslib][htslib]]. 
+It iterates through a bam alignment file and reports, at each position which is
+covered with at least one alignment, the total coverage and the counts of all bases
+present.
+
+Several filters may be employed, like minimum mapping quality, minimum and
+maximum coverage, and minimum base frequency. These are documented in the usage
+message of the tool.
+
+* Get it!
+#+BEGIN_SRC bash
+git clone --recursive https://github.com/clwgg/bamfreq
+
+cd bamfreq
+make submodules
+make
+#+END_SRC
+
